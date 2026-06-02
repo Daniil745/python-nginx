@@ -17,27 +17,27 @@
 ## Запуск
 
 ```bash
-# 1. Клонировать репозиторий
+1. Клонировать репозиторий
 git clone https://github.com/Daniil745/python-nginx
 cd python-nginx
 
-# 2. Запустить сервисы
+2. Запустить сервисы
 docker-compose up -d --build
 
-# 3. Проверить, что оба контейнера запущены
+3. Проверить, что оба контейнера запущены
 docker-compose ps
 ```
 
 ## Проверка работоспособности
 
 ```bash
-# Успешный запрос
+Успешный запрос
 curl http://localhost/
 
-# Запрос несуществующего пути (ошибка 404)
+Запрос несуществующего пути (ошибка 404)
 curl http://localhost/anything
 
-# Backend НЕ доступен с хоста напрямую (Connection refused)
+Backend не доступен с хоста напрямую (Connection refused)
 curl http://localhost:8080/
 ```
 
