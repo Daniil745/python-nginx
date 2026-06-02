@@ -1,7 +1,7 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 class SimpleHandler(BaseHTTPRequestHandler):
-  def to_Get(self):
+  def do_GET(self):
     if self.path == "/":
       self.send_response(200)
       self.send_header('Content-type', 'text/plain; charset=utf-8')
